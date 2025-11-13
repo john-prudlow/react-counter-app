@@ -20,12 +20,11 @@ export default function Counter({ id, name, increment, count, onDelete, onCount 
   const handleDelete = () => {
     if (confirm(`Are you sure you want to delete "${name}"?`)) {
       onDelete(id);
-      onCount(id, 0);
     }
   };
 
   return (
-    <div class="counter">
+    <div className="counter">
       <h2>{name}: {count}</h2>
       <ButtonGroup>
         <Button className="incVal" onClick={handleIncrement}>+</Button>
