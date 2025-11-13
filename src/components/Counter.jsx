@@ -20,7 +20,6 @@ export default function Counter({ id, name, increment, count, onDelete, onCount 
   const handleDelete = () => {
     if (confirm(`Are you sure you want to delete "${name}"?`)) {
       onDelete(id);
-      onCount(id, 0);
     }
   };
 

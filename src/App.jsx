@@ -49,9 +49,13 @@ function App() {
     console.log(newCounter);
   }
 
-  const handleDeleteCounter = (idToDelete) => {
-    setCounters(prev => prev.filter(counter => counter.id !== idToDelete));
-  };
+ const handleDeleteCounter = (idToDelete) => {
+  const updatedCounters = counters.filter(counter => counter.id !== idToDelete);
+  setCounters(updatedCounters);
+
+  const total = updatedCounters.reduce((sum, c) => sum + c.count, 0);
+  setTotalCount(total);
+};
 
   const handleTotalCount = (id, newCount) => {
   const updatedCounters = counters.map(counter =>
