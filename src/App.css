@@ -79,6 +79,7 @@ form .btn-group { display:flex; justify-content:center; }
   border-radius:15px;
   flex:1 1 45%;
   margin-bottom:1.5rem;
+  padding-bottom:1rem;
 }
 
 .counter .btn-group { display:flex; flex-wrap:wrap; }
